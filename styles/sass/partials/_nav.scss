@@ -5,11 +5,26 @@
     margin: 0;
     padding-top: 30px;
     background-color: $secondary;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    padding-bottom: 15px; 
     .logoItem {
         margin-right: auto;
         a:hover {
             color: $tertiary;
         }
+    }
+    .resume {
+        border: 3px solid $tertiary;
+        padding: 5px 10px;
+        border-radius: 8px;
+        animation: 0.4s ease-in;
+
+    }
+    .resume:hover {
+        background-color: $tertiary;
+        color: #fff; 
     }
     
     li {

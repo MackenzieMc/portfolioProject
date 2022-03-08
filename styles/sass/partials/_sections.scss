@@ -70,10 +70,15 @@
 .projectContainer {
     display: flex; 
     flex-direction: column;
+    h2 {
+        margin-bottom: 0;
+    }
 }
 
 .projectCard {
     display: flex; 
+    justify-content: space-between;
+    margin-bottom: 40px;
     .projectInfo {
         width: 50%;
         h3 {
@@ -107,6 +112,10 @@
             background-color: $primary; 
             color: #fff; 
         }
+    }
+    .projectImg {
+        border: 3px solid $primary;
+        width: 40%;
     }
 }
 

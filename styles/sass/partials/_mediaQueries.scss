@@ -7,6 +7,16 @@
             text-align: center;
         }
     }
+
+    //Navigation Menu
+    .navContainer {
+        li {
+            a{
+                font-size: 0.8rem;
+            }
+        }
+    }
+
     //About Section
     .aboutFlexContainer {
         flex-direction: column-reverse;

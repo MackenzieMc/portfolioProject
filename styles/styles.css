@@ -279,12 +279,27 @@ section {
   margin: 0;
   padding-top: 30px;
   background-color: #f8f8f6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-bottom: 15px;
 }
 .navContainer .logoItem {
   margin-right: auto;
 }
 .navContainer .logoItem a:hover {
   color: #0be0b0;
+}
+.navContainer .resume {
+  border: 3px solid #0be0b0;
+  padding: 5px 10px;
+  border-radius: 8px;
+  -webkit-animation: 0.4s ease-in;
+          animation: 0.4s ease-in;
+}
+.navContainer .resume:hover {
+  background-color: #0be0b0;
+  color: #fff;
 }
 .navContainer li {
   list-style: none;
@@ -453,11 +468,18 @@ header .textContainer p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.projectContainer h2 {
+  margin-bottom: 0;
+}
 
 .projectCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
 }
 .projectCard .projectInfo {
   width: 50%;
@@ -497,6 +519,10 @@ header .textContainer p {
 .projectCard .projectInfo a:hover {
   background-color: #032973;
   color: #fff;
+}
+.projectCard .projectImg {
+  border: 3px solid #032973;
+  width: 40%;
 }
 
 .reverseProject {
@@ -603,6 +629,10 @@ footer a {
 @media (max-width: 768px) {
   section h2 {
     text-align: center;
+  }
+
+  .navContainer li a {
+    font-size: 0.8rem;
   }
 
   .aboutFlexContainer {
