@@ -34,6 +34,10 @@
         flex-direction: column;
         align-items: center;
         margin: 0 25px;
+        transition: all .2s ease-in-out;
+        .iconItemContainer:hover {
+            transform: scale(1.1); 
+        }
         i {
             font-size: 3rem;
             color: $primary;
@@ -60,9 +64,55 @@
     }
 }
 
+
+//Project Section
+
 .projectContainer {
     display: flex; 
     flex-direction: column;
+}
+
+.projectCard {
+    display: flex; 
+    .projectInfo {
+        width: 50%;
+        h3 {
+            font-size: 2rem;
+        }
+        ul {
+            display: flex; 
+            justify-content: flex-start;
+            padding-left: 0; 
+            li {
+                list-style: none;
+                margin-right: 20px; 
+                font-size: 1.5rem; 
+                color: $primary; 
+                i:hover {
+                    color: $quaternary;
+                }
+            }
+        }
+        a {
+            text-decoration: none;
+            margin: 10px 30px 0px 0px;
+            border: 3px solid $primary;
+            padding: 8px 20px;
+            border-radius: 8px;
+            color: $black;
+            display: inline-block;
+            animation: 2s ease-in;
+        }
+        a:hover {
+            background-color: $primary; 
+            color: #fff; 
+        }
+    }
+}
+
+.reverseProject {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 //Contact Section
@@ -71,10 +121,6 @@
     background-color: $primary;
     margin: 0px;
     padding: 80px 0px;
-    background-image: url(../assets/contact-bg-1.png);
-    background-size: cover;
-    background-position: left;
-
 }
 
 .contactInfo {
@@ -132,6 +178,11 @@
             font-size: 2rem;
             color: $tertiary;
             cursor: pointer;
+            transition: all .2s ease-in-out; 
+        }
+        i:hover {
+            transform: scale(1.1); 
+            color: $quaternary;
         }
     }
 }

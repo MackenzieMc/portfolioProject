@@ -257,6 +257,10 @@ p {
   font-family: "Montserrat", sans-serif;
 }
 
+a {
+  font-family: "Montserrat", sans-serif;
+}
+
 section {
   margin: 75px 0;
 }
@@ -279,8 +283,8 @@ section {
 .navContainer .logoItem {
   margin-right: auto;
 }
-.navContainer .logoItem:hover {
-  border: none;
+.navContainer .logoItem a:hover {
+  color: #0be0b0;
 }
 .navContainer li {
   list-style: none;
@@ -293,7 +297,7 @@ section {
   color: #000;
   font-family: "Montserrat", sans-serif;
 }
-.navContainer li a::after {
+.navContainer li .navItems::after {
   content: "";
   display: block;
   width: 0;
@@ -302,7 +306,7 @@ section {
   -webkit-transition: width 0.4s ease-in;
   transition: width 0.4s ease-in;
 }
-.navContainer li a:hover::after {
+.navContainer li .navItems:hover::after {
   width: 100%;
 }
 
@@ -391,6 +395,12 @@ header .textContainer p {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 25px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.iconContainer .iconItemContainer .iconItemContainer:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .iconContainer .iconItemContainer i {
   font-size: 3rem;
@@ -444,13 +454,65 @@ header .textContainer p {
           flex-direction: column;
 }
 
+.projectCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.projectCard .projectInfo {
+  width: 50%;
+}
+.projectCard .projectInfo h3 {
+  font-size: 2rem;
+}
+.projectCard .projectInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 0;
+}
+.projectCard .projectInfo ul li {
+  list-style: none;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  color: #032973;
+}
+.projectCard .projectInfo ul li i:hover {
+  color: #fe6192;
+}
+.projectCard .projectInfo a {
+  text-decoration: none;
+  margin: 10px 30px 0px 0px;
+  border: 3px solid #032973;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: #000;
+  display: inline-block;
+  -webkit-animation: 2s ease-in;
+          animation: 2s ease-in;
+}
+.projectCard .projectInfo a:hover {
+  background-color: #032973;
+  color: #fff;
+}
+
+.reverseProject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 .contact {
   background-color: #032973;
   margin: 0px;
   padding: 80px 0px;
-  background-image: url(../assets/contact-bg-1.png);
-  background-size: cover;
-  background-position: left;
 }
 
 .contactInfo {
@@ -515,6 +577,13 @@ header .textContainer p {
   font-size: 2rem;
   color: #0be0b0;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.iconContainer li i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #fe6192;
 }
 
 footer {
@@ -529,4 +598,105 @@ footer p {
 footer a {
   text-decoration: none;
   color: #0be0b0;
+}
+
+@media (max-width: 768px) {
+  section h2 {
+    text-align: center;
+  }
+
+  .aboutFlexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutFlexContainer .aboutImgContainer {
+    width: 55%;
+    height: 400px;
+  }
+  .aboutFlexContainer .aboutTextContainer {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .projectCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projectCard .projectImg {
+    height: 400px;
+    border: 3px solid #032973;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .projectCard .projectInfo {
+    width: 100%;
+  }
+
+  .contactContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contactContainer .contactInfo {
+    width: 100%;
+  }
+  .contactContainer .contactInfo .iconContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contactContainer .contactForm {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .contactContainer .contactForm input {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .aboutFlexContainer .aboutImgContainer {
+    width: 100%;
+  }
+
+  .iconContainer .iconItemContainer {
+    width: calc(33% - 50px);
+  }
+}
+@media (max-width: 320px) {
+  header .textContainer h1 {
+    font-size: 2rem;
+  }
+  header .textContainer h3 {
+    font-size: 1.5rem;
+  }
+  header .textContainer p {
+    font-size: 1rem;
+  }
+
+  .iconContainer .iconItemContainer {
+    width: calc(50% - 50px);
+  }
+
+  .projectCard .projectInfo a {
+    width: 50%;
+  }
 }
