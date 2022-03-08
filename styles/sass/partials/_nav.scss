@@ -1,0 +1,36 @@
+.navContainer {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    padding-top: 30px;
+    background-color: $secondary;
+    .logoItem {
+        margin-right: auto;
+    }
+    .logoItem:hover {
+        border: none; 
+    }
+    li {
+        list-style: none;
+        margin: 10px 25px 0px 25px;
+        a {
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: $black;
+            font-family: $primaryFont;
+        }
+        a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: $primary;
+            transition: width .4s ease-in;
+        }
+        a:hover::after {
+            width: 100%;
+        }
+    }
+}

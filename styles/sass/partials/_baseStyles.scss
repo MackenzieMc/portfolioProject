@@ -1,0 +1,33 @@
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto; 
+}
+
+h1 {
+    font-family: $secondaryFont;
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 0;
+    font-family: $secondaryFont;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: $secondaryFont;
+    font-weight: normal;
+}
+
+p {
+    font-family: $primaryFont;
+}
+
+section {
+    margin: 75px 0;
+}

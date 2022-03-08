@@ -1,0 +1,27 @@
+header {
+    height: 90vh;
+    background-color: $secondary;
+    display: flex; 
+    align-items: center;
+    background-image: url(../assets/sub-bnr-home.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    .textContainer {
+        margin: 0 auto;
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 0; 
+        }
+        h1 {
+            font-size: 3rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        } 
+        p {
+            font-size: 1.5rem;
+            color: $primary;
+            margin-top: 1rem;
+        }
+    }
+}
