@@ -1,4 +1,8 @@
+# Ignore the following folders: 
+
 .DS_Store
 .vscode
 
 .node_modules
+.pdfs
+.sass
