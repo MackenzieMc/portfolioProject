@@ -3,6 +3,6 @@
 .DS_Store
 .vscode
 
-.node_modules
-.pdfs
-.sass
+/sass
+/node_modules
+/pdfs
