@@ -370,19 +370,21 @@ header .textContainer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-  z-index: 25;
 }
 header .textContainer h3 {
   font-size: 2rem;
   margin-bottom: 0;
   color: #869ba9;
+  position: relative;
+  z-index: 25;
 }
 header .textContainer h1 {
   font-size: 3rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  position: relative;
+  z-index: 25;
 }
 header .textContainer p {
   font-size: 1.5rem;
