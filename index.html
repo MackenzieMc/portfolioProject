@@ -8,26 +8,29 @@
     <script src="https://kit.fontawesome.com/a4d1465f68.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>👋 Mackenzie McClemont</title>
+    <title>👋  Mackenzie McClemont</title>
 </head>
 <body>
-    <nav>
-        <ul class="navContainer">
-            <li class="logoItem"><a href="">Mackenzie</a></li>
-            <li><a href="#about" class="navItems">About</a></li>
-            <li><a href="#toolkit" class="navItems">Toolkit</a></li>
-            <li><a href="#projects" class="navItems">Projects</a></li>
-            <li><a href="#contact" class="navItems">Contact</a></li>
-            <li><a href="./pdfs/MackenzieMcClemontResume.pdf" class="resume">Resume</a></li>
-        </ul>
-    </nav>
     <header>
-        <div class="wrapper">
-            <div class="textContainer">
-                <h3>Hello! I'm</h3>
-                <h1>Mackenzie McClemont</h1>
-                <p>Front-End Developer</p>
+        <div id="particles-js">
+            <nav>
+                <ul class="navContainer">
+                    <li><a href="#about" class="navItems">About</a></li>
+                    <li><a href="#toolkit" class="navItems">Toolkit</a></li>
+                    <li><a href="#projects" class="navItems">Projects</a></li>
+                    <li><a href="#contact" class="navItems">Contact</a></li>
+                    <li><a href="./pdfs/MackenzieMcClemontResume.pdf" class="resume">Resume</a></li>
+                </ul>
+            </nav>
+            <div class="wrapper">
+                <div class="textContainer">
+                    <h3>Hello! I'm</h3>
+                    <h1>Mackenzie McClemont</h1>
+                </div>
             </div>
+            <a class="chevronContainer bounce" href="#about">
+                <i class="fa-solid fa-chevron-down chevron"></i>
+            </a>
         </div>
     </header>
     <main>
@@ -36,20 +39,16 @@
                 <h2>About me</h2>
                 <div class="aboutFlexContainer">
                     <div class="aboutTextContainer">
-                        <p>I am currently attending the <a href="https://junocollege.com/bootcamp/web-development-toronto/" class="junoAnchor">Juno College of Technology</a> immersive web development bootcamp. Prior to beginning my journey as a developer I completed my Bachelors Degree in Sport Management at <a href="https://brocku.ca/programs/undergraduate/sport-management/" class="brockAnchor">Brock University</a>.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam culpa harum laborum quasi dolorem? Odit dolore cumque fugiat minus sunt vel dicta voluptatem quas? Quibusdam laborum dignissimos consectetur sapiente esse!</p>
-                    </div>
-                    <div class="aboutImgContainer">
-
+                        <p>Hey! I am a front end developer from Toronto, Ontario! As a developer with experience working in cross functional roles I bring a wealth of experience in team based colloboration. I am passionate about championing diversity and inclusion which allows me to think about all users when building and desigining modern, accessible, and responsive applications.</p>
+                        <p>When im not coding you can catch me trail running, watching a basketball game, or attempting to learn the piano.</p>
                     </div>
                 </div>
 
             </div>
             
         </section>
-        <section id="toolkit">
+        <section id="toolkit" class="toolkit">
             <div class="wrapper">
-                <h2>My Toolkit</h2>
                 <ul class="iconContainer">
                     <li class="iconItemContainer">
                         <i class="devicon-html5-plain"></i>
@@ -87,68 +86,67 @@
                         <i class="devicon-github-original"></i>
                         <p>Github</p>
                     </li>
-                    <li class="iconItemContainer">
-                        <i class="devicon-vscode-plain colored"></i>
-                        <p>VSCode</p>
-                    </li>
                 </ul>
             </div>
         </section>
+        <!-- Start of Project Section -->
         <section id="projects">
             <div class="projectContainer wrapper">
-                <h2>My Projects</h2>
-                <p>Here's a selection of projects I have made along the way!</p>
-                <div class="projectCard" data-aos="fade-right">
-                    <div class="projectInfo">
-                        <h3>Flix.</h3>
-                        <p>Looking for some new movies to spice up your viewing rotation? Check out Flix! Powered by the MovieDB API, Flix displays todays trending and popular movies! Search for movies you may be interested in or use the discover tab to find some rather obscure flicks!</p>
-                        <ul>
-                            <li><i class="fa-brands fa-html5"></i></li>
-                            <li><i class="fa-brands fa-css3"></i></li>
-                            <li><i class="fa-brands fa-sass"></i></li>
-                            <li><i class="fa-brands fa-js"></i></li>
-                        </ul>
-                        <a href="https://github.com/flixProject2/flix">GitHub</a>
-                        <a href="https://condescending-wescoff-31bda7.netlify.app/">Live Site</a>
+                <div class="projects">
+                    <h2>My Projects</h2>
+                    <div class="projectCard">
+                        <div class="projectInfo" >
+                            <h3 class="titleText">Podcast Prioritizer</h3>
+                            <ul>
+                                <li><i class="fa-brands fa-html5"></i></li>
+                                <li><i class="fa-brands fa-css3"></i></li>
+                                <li><i class="fa-brands fa-sass"></i></li>
+                                <li><i class="fa-brands fa-js"></i></li>
+                                <li><i class="fa-brands fa-react"></i></li>
+                                <li><i class="devicon-firebase-plain"></i></li>
+                                <li><i class="fa-solid fa-users"></i></li>
+                            </ul>
+                            <a href="">GitHub</a>
+                            <a href="">Live Site</a>
+                        </div>
                     </div>
-                    <div class="projectImg"></div>
+                    <div class="projectCard">
+                        <div class="projectInfo">
+                            <h3 class="titleText">Jeopardy</h3>
+                            <ul>
+                                <li><i class="fa-brands fa-html5"></i></li>
+                                <li><i class="fa-brands fa-css3"></i></li>
+                                <li><i class="fa-brands fa-sass"></i></li>
+                                <li><i class="fa-brands fa-js"></i></li>
+                                <li><i class="fa-brands fa-react"></i></li>
+                            </ul>
+                            <a href="https://github.com/MackenzieMc/jeopardy">GitHub</a>
+                            <a href="https://phenomenal-boba-585c26.netlify.app/">Live Site</a>
+                        </div>
+                    </div>
+                    <div class="projectCard">
+                        <div class="projectInfo">
+                            <h3 class="titleText">Flix</h3>
+                            <ul>
+                                <li><i class="fa-brands fa-html5"></i></li>
+                                <li><i class="fa-brands fa-css3"></i></li>
+                                <li><i class="fa-brands fa-sass"></i></li>
+                                <li><i class="fa-brands fa-js"></i></li>
+                                <li><i class="fa-solid fa-user-group"></i></li>
+                            </ul>
+                            <a href="https://github.com/flixProject2/flix">GitHub</a>
+                            <a href="https://condescending-wescoff-31bda7.netlify.app/">Live Site</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="projectCard reverseProject" data-aos="fade-left">
-                    <div class="projectInfo" >
-                        <h3>Project 3</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, quidem consequuntur sed sequi earum commodi libero vero similique consequatur quibusdam.</p>
-                        <ul>
-                            <li><i class="fa-brands fa-html5"></i></li>
-                            <li><i class="fa-brands fa-css3"></i></li>
-                            <li><i class="fa-brands fa-sass"></i></li>
-                            <li><i class="fa-brands fa-js"></i></li>
-                            <li><i class="fa-brands fa-react"></i></li>
-                        </ul>
-                        <a href="">GitHub</a>
-                        <a href="">Live Site</a>
-                    </div>
-                    <div class="projectImg"></div>
-                </div>
-                <div class="projectCard" data-aos="fade-right">
-                    <div class="projectInfo">
-                        <h3>Project 4</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolores distinctio veniam officia deleniti eius quam rerum nemo eum quod.</p>
-                        <ul>
-                            <li><i class="fa-brands fa-html5"></i></li>
-                            <li><i class="fa-brands fa-css3"></i></li>
-                            <li><i class="fa-brands fa-sass"></i></li>
-                            <li><i class="fa-brands fa-js"></i></li>
-                            <li><i class="fa-brands fa-react"></i></li>
-                        </ul>
-                        <a href="">GitHub</a>
-                        <a href="">Live Site</a>
-                    </div>
-                    <div class="projectImg"></div>
+                <div class="imgContainer">
+                    <img class="selectedImage" src="./assets/Podcast Prioritizer.png" alt="Multiple viewpoints for the app PodCast Prioritizer">
                 </div>
 
             </div>
-
+            <!-- End of wrapper -->
         </section>
+        <!-- End of Project section -->
         <section id="contact" class="contact">
             <div class="circleContact"></div>
             <div class="contactContainer wrapper">
@@ -164,6 +162,9 @@
                         </li>
                         <li>
                             <a href="mailto:mackenziemcclemontm@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://calendly.com/mackenziemcclemont"><i class="fa-solid fa-calendar-days"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -186,9 +187,13 @@
         </section>
     </main>
     <footer>
-        <p>Developed and designed by <a href="https://www.linkedin.com/in/mackenziemcclemont/">Mackenzie McClemont</a></p>
+        <div class="wrapper">
+            <p>Developed and designed by <a href="https://www.linkedin.com/in/mackenziemcclemont/">Mackenzie McClemont</a></p>
+        </div>
     </footer>
+    <script src="./node_modules/particles.js/particles.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./app.js"></script>
     <script>
         AOS.init();
     </script>

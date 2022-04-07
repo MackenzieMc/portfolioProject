@@ -229,23 +229,54 @@ html {
 
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
-  width: 85%;
+  width: 90%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 h1 {
+  color: #deb992;
   font-family: "Playfair Display", serif;
   font-weight: 700;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 h2 {
   margin-top: 0;
   font-family: "Playfair Display", serif;
   font-size: 2rem;
+  position: relative;
+  color: #deb992;
 }
 
 h3 {
@@ -262,7 +293,7 @@ a {
 }
 
 section {
-  margin: 75px 0;
+  padding: 130px 0px 75px 0px;
 }
 
 .navContainer {
@@ -278,72 +309,74 @@ section {
           justify-content: flex-end;
   margin: 0;
   padding-top: 30px;
-  background-color: #f8f8f6;
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
-  padding-bottom: 15px;
-}
-.navContainer .logoItem {
-  margin-right: auto;
-}
-.navContainer .logoItem a:hover {
-  color: #0be0b0;
+  padding-bottom: 25px;
+  z-index: 30;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 .navContainer .resume {
-  border: 3px solid #0be0b0;
+  border: 3px solid #1ba098;
   padding: 5px 10px;
   border-radius: 8px;
   -webkit-animation: 0.4s ease-in;
           animation: 0.4s ease-in;
 }
-.navContainer .resume:hover {
-  background-color: #0be0b0;
+.navContainer .resume:hover,
+.navContainer .resume:focus {
+  background-color: #1ba098;
   color: #fff;
 }
 .navContainer li {
   list-style: none;
   margin: 10px 25px 0px 25px;
+  color: #1ba098;
+  position: relative;
 }
 .navContainer li a {
   text-decoration: none;
-  font-size: 1rem;
+  color: #1ba098;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  color: #000;
   font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: 30;
 }
-.navContainer li .navItems::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 1px;
-  background: #032973;
-  -webkit-transition: width 0.4s ease-in;
-  transition: width 0.4s ease-in;
+.navContainer li .navItems:hover,
+.navContainer li .navItems:focus {
+  opacity: 0.7;
 }
 .navContainer li .navItems:hover::after {
   width: 100%;
 }
 
 header {
-  height: 90vh;
-  background-color: #f8f8f6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: url(../assets/sub-bnr-home.png);
-  background-repeat: no-repeat;
-  background-position: right bottom;
+  background-color: #051622;
+  position: relative;
 }
 header .textContainer {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 25;
 }
 header .textContainer h3 {
   font-size: 2rem;
   margin-bottom: 0;
+  color: #869ba9;
 }
 header .textContainer h1 {
   font-size: 3rem;
@@ -353,8 +386,71 @@ header .textContainer h1 {
 }
 header .textContainer p {
   font-size: 1.5rem;
-  color: #032973;
+  color: #051622;
   margin-top: 1rem;
+}
+header .chevronContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  color: white;
+  text-decoration: none;
+}
+header .chevronContainer .chevron {
+  color: white;
+  font-size: 1.4rem;
+}
+header .bounce {
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+}
+
+#about .wrapper h2::before {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  width: 200px;
+  height: 30px;
+  background-color: #051622;
+  top: 30px;
+  left: -10px;
 }
 
 .aboutFlexContainer {
@@ -370,7 +466,7 @@ header .textContainer p {
           justify-content: space-between;
 }
 .aboutFlexContainer .aboutTextContainer {
-  width: 50%;
+  width: 100%;
 }
 .aboutFlexContainer .aboutTextContainer .junoAnchor {
   color: #ea593e;
@@ -382,7 +478,12 @@ header .textContainer p {
 }
 .aboutFlexContainer .aboutImgContainer {
   width: 45%;
-  border: 1px solid #032973;
+  border: 1px solid #051622;
+}
+
+.toolkit {
+  background-color: #001f33;
+  padding: 25px 0px;
 }
 
 .iconContainer {
@@ -398,7 +499,8 @@ header .textContainer p {
   padding: 0;
 }
 .iconContainer .iconItemContainer {
-  width: calc(20% - 50px);
+  width: calc(11.1111111111% - 20px);
+  color: #869ba9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,7 +511,7 @@ header .textContainer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 25px;
+  margin: 0 10px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -419,13 +521,16 @@ header .textContainer p {
 }
 .iconContainer .iconItemContainer i {
   font-size: 3rem;
-  color: #032973;
+  color: #1ba098;
   margin-top: 20px;
   -webkit-animation: 0.3s ease-in;
           animation: 0.3s ease-in;
 }
 .iconContainer .iconItemContainer i:hover {
   color: #fe6192;
+}
+.iconContainer .iconItemContainer p {
+  display: none;
 }
 
 .contactContainer {
@@ -459,7 +564,22 @@ header .textContainer p {
           flex-direction: row;
 }
 
-.projectContainer {
+section {
+  padding: 90px 0;
+}
+section .projectContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section .projectContainer .projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,9 +587,16 @@ header .textContainer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 40%;
 }
-.projectContainer h2 {
-  margin-bottom: 0;
+section .projectContainer .imgContainer {
+  width: 60%;
+}
+section .projectContainer .imgContainer img {
+  width: 100%;
+}
+section .projectContainer h2 {
+  margin-bottom: 30px;
 }
 
 .projectCard {
@@ -486,6 +613,9 @@ header .textContainer p {
 }
 .projectCard .projectInfo h3 {
   font-size: 2rem;
+  margin: 0 0 10px 0;
+  color: #deb992;
+  cursor: pointer;
 }
 .projectCard .projectInfo ul {
   display: -webkit-box;
@@ -495,12 +625,13 @@ header .textContainer p {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding-left: 0;
+  margin: 0;
 }
 .projectCard .projectInfo ul li {
   list-style: none;
   margin-right: 20px;
   font-size: 1.5rem;
-  color: #032973;
+  color: #1ba098;
 }
 .projectCard .projectInfo ul li i:hover {
   color: #fe6192;
@@ -508,20 +639,12 @@ header .textContainer p {
 .projectCard .projectInfo a {
   text-decoration: none;
   margin: 10px 30px 0px 0px;
-  border: 3px solid #032973;
-  padding: 8px 20px;
   border-radius: 8px;
-  color: #000;
+  color: #869ba9;
   display: inline-block;
-  -webkit-animation: 2s ease-in;
-          animation: 2s ease-in;
-}
-.projectCard .projectInfo a:hover {
-  background-color: #032973;
-  color: #fff;
 }
 .projectCard .projectImg {
-  border: 3px solid #032973;
+  border: 3px solid #051622;
   width: 40%;
 }
 
@@ -536,10 +659,23 @@ header .textContainer p {
 }
 
 .contact {
-  background-color: #032973;
+  background-color: #051622;
   margin: 0px;
   padding: 80px 0px;
   position: relative;
+  overflow: clip;
+}
+
+.circleGroup {
+  position: relative;
+}
+.circleGroup .circleOne {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #deb992;
+  z-index: 2;
 }
 
 .contactInfo {
@@ -547,11 +683,11 @@ header .textContainer p {
 }
 .contactInfo h2 {
   font-family: "Playfair Display", serif;
-  color: #fff;
+  color: #deb992;
   font-size: 2rem;
 }
 .contactInfo p {
-  color: #fff;
+  color: #869ba9;
 }
 
 .contactForm {
@@ -561,19 +697,23 @@ header .textContainer p {
   width: 100%;
   margin-bottom: 20px;
   padding: 8px;
-  border: 4px solid #0be0b0;
+  border: 2px solid #1ba098;
   border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .contactForm textarea {
   width: 100%;
   margin-bottom: 20px;
   padding: 8px;
-  border: 4px solid #0be0b0;
+  border: 2px solid #1ba098;
   border-radius: 8px;
   resize: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .contactForm button {
-  border: 3px solid #0be0b0;
+  border: 3px solid #1ba098;
   border-radius: 8px;
   background-color: transparent;
   color: #fff;
@@ -582,7 +722,7 @@ header .textContainer p {
   transition: 0.2s ease-in;
 }
 .contactForm button:hover {
-  background-color: #0be0b0;
+  background-color: #1ba098;
 }
 
 .iconContainer {
@@ -602,12 +742,13 @@ header .textContainer p {
 }
 .iconContainer li i {
   font-size: 2rem;
-  color: #0be0b0;
+  color: #1ba098;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.iconContainer li i:hover {
+.iconContainer li i:hover,
+.iconContainer li i:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: #fe6192;
@@ -615,19 +756,36 @@ header .textContainer p {
 
 footer {
   text-align: center;
-  background-color: #032973;
+  background-color: #051622;
   padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
-footer p {
+footer .wrapper {
+  border-top: 1px solid #869ba9;
+  opacity: 0.7;
+}
+footer .wrapper p {
+  padding-top: 25px;
   margin: 0;
-  color: #fff;
+  color: #869ba9;
+  opacity: 0.7;
 }
-footer a {
+footer .wrapper a {
   text-decoration: none;
-  color: #0be0b0;
+  color: #1ba098;
+  opacity: 0.9;
+}
+footer .wrapper a:hover,
+footer .wrapper a:focus {
+  opacity: 0.7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  header .textContainer h1 {
+    font-size: 2rem;
+  }
+
   section h2 {
     text-align: center;
   }
@@ -654,6 +812,10 @@ footer a {
     margin-top: 30px;
   }
 
+  .iconContainer .iconItemContainer {
+    width: calc(20% - 20px);
+  }
+
   .projectCard {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -665,7 +827,7 @@ footer a {
   }
   .projectCard .projectImg {
     height: 400px;
-    border: 3px solid #032973;
+    border: 3px solid #051622;
     width: 100%;
     margin-top: 30px;
   }
@@ -684,11 +846,15 @@ footer a {
   }
   .contactContainer .contactInfo {
     width: 100%;
+    text-align: center;
   }
   .contactContainer .contactInfo .iconContainer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .contactContainer .contactInfo .iconContainer li:nth-child(3) {
+    margin-right: 0;
   }
   .contactContainer .contactForm {
     width: 100%;
@@ -699,6 +865,13 @@ footer a {
   }
 }
 @media (max-width: 480px) {
+  .navContainer li {
+    margin: 10px 15px 0px 15px;
+  }
+  .navContainer li a {
+    font-size: 0.6rem;
+  }
+
   header {
     background-position: center;
     background-size: cover;
@@ -710,6 +883,10 @@ footer a {
 
   .iconContainer .iconItemContainer {
     width: calc(33% - 50px);
+  }
+
+  footer p {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 320px) {

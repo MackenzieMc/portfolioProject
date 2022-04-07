@@ -1,5 +1,13 @@
-//940px screen size
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
+
+    header {
+        .textContainer {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
 
     //General Section Styling 
     section {
@@ -31,6 +39,13 @@
         }
     }
 
+    //Toolkit Section
+    .iconContainer {
+        .iconItemContainer {
+            width: calc((100% / 5) - 20px); 
+        }
+    }
+
     //Project Section
     .projectCard {
         flex-direction: column-reverse;
@@ -50,10 +65,16 @@
     .contactContainer {
         flex-direction: column;
         align-items: center;
+
         .contactInfo {
             width: 100%;
+            text-align: center;
             .iconContainer {
                 justify-content: center;
+                li:nth-child(3) {
+                    margin-right: 0; 
+                }
+
             }
         }
         .contactForm {
@@ -67,6 +88,15 @@
 }
 
 @media (max-width: 480px) {
+    //Nav Bar
+    .navContainer {
+        li {
+            margin: 10px 15px 0px 15px;
+            a {
+                font-size: 0.6rem; 
+            }
+        }
+    }    
 
     //Header 
     header {
@@ -84,6 +114,13 @@
     .iconContainer {
         .iconItemContainer {
             width: calc(33% - 50px);
+        }
+    }
+
+    //Footer Section
+    footer {
+        p {
+            font-size: 0.8rem
         }
     }
 }
