@@ -1,0 +1,50 @@
+.navContainer {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    padding-top: 30px;
+    background-color: transparent;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    padding-bottom: 25px; 
+    z-index: 30;
+    transition: 0.6s;
+    .resume {
+        border: 3px solid $tertiary;
+        padding: 5px 10px;
+        border-radius: 8px;
+        animation: 0.4s ease-in;
+
+    }
+    .resume:hover,
+    .resume:focus {
+        background-color: $tertiary;
+        color: #fff; 
+    }
+    
+    li {
+        list-style: none;
+        margin: 10px 25px 0px 25px;
+        color: $tertiary;
+        position: relative;
+        a {
+            text-decoration: none;
+            color: $tertiary;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-family: $primaryFont;
+            position: relative;
+            z-index: 30;
+        }
+        .navItems:hover,
+        .navItems:focus {
+            opacity: 0.7;
+        }
+        .navItems:hover::after {
+            width: 100%;
+        }
+    }
+}
+
