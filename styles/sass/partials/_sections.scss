@@ -48,6 +48,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0; 
+    margin-bottom: 0;
     .iconItemContainer {
         width: calc((100% / 9) - 20px );
         color: $quinary;
@@ -55,21 +56,27 @@
         flex-direction: column;
         align-items: center;
         margin: 0 10px;
-        transition: all .2s ease-in-out;
-        .iconItemContainer:hover {
-            transform: scale(1.1); 
-        }
+        transition: all .3s ease-in-out;
         i {
             font-size: 3rem;
             color: $tertiary;
             margin-top: 20px;
             animation: 0.3s ease-in
         }
-        i:hover {
-            color: $quaternary;
+        .hoverText {
+            opacity: 0;
+            margin-bottom: 0;
+            transition: 0.3s ease-in;
+            margin-top: 12px; 
         }
-        p {
-            display: none; 
+
+        &:hover i {
+            transform: scale(1.1);
+            color: $quaternary; 
+        }
+        &:hover .hoverText {
+            opacity: 1;
+            color: $quaternary
         }
     }
 }
@@ -110,7 +117,17 @@ section {
             }
         }
         h2 {
-            margin-bottom: 30px;
+            margin-bottom: 30px;   
+        }
+        h2::before {
+            content: '';
+            position: absolute;
+            z-index: -10; 
+            width: 240px; 
+            height: 30px; 
+            background-color: $primary;
+            top: 30px; 
+            left: -10px; 
         }
     }
 }
@@ -118,11 +135,11 @@ section {
 .projectCard {
     display: flex; 
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     .projectInfo {
-        width: 50%;
+        width:100%;
         h3 {
-            font-size: 2rem;
+            font-size: 1.7rem;
             margin: 0 0 10px 0;
             color: $secondary;
             cursor: pointer;
@@ -170,18 +187,6 @@ section {
     position: relative;
     overflow: clip;
 
-}
-
-.circleGroup {
-    position: relative;
-    .circleOne {
-        position: absolute;
-        width: 200px;
-        height: 200px; 
-        border-radius: 50%;
-        border: 1px solid $secondary;
-        z-index: 2;
-    }
 }
 
 .contactInfo {
