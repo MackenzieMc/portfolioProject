@@ -1,38 +1,19 @@
 //About Section
 
-#about {
-    .wrapper {
-        h2::before {
-            content: '';
-            position: absolute;
-            z-index: -10; 
-            width: 200px; 
-            height: 30px; 
-            background-color: $primary;
-            top: 30px; 
-            left: -10px; 
-        }
-    }
-}
-
 .aboutFlexContainer {
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
-    .aboutTextContainer {
-        width: 100%;
-        .junoAnchor {
-            color: #ea593e;
-            text-decoration: none;
-        }
-        .brockAnchor {
-            color: #cc0000;
-            text-decoration: none;
-        }
-    }
+    align-items: center;
     .aboutImgContainer {
-        width: 45%; 
-        border: 1px solid $primary;
+        width: 30%;
+        img {
+            width: 100%;
+        } 
+    }
+    .aboutTextContainer {
+        width: calc(70% - 40px);
+        margin-left: 40px;
     }
 }
 

@@ -38,16 +38,27 @@ header {
                 right: 50%;
                 color: white; 
                 text-decoration: none;
+                z-index: 25;
+                opacity: 0.5;
+                transition: 0.3s ease-in;
+
+                &:hover,
+                &:focus {
+                    opacity: 1
+                }
                 
                 .chevron {
                     color: white; 
                     font-size: 1.4rem; 
                 }
+                p {
+                    color: white;
+                }
     }
     .bounce {
-        -moz-animation: bounce 3s infinite;
-        -webkit-animation: bounce 3s infinite;
-        animation: bounce 3s infinite;
+        -moz-animation: bounce 2s infinite;
+        -webkit-animation: bounce 2s infinite;
+        animation: bounce 2s infinite;
     }
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
