@@ -47,6 +47,11 @@
     }
 
     //Project Section
+    .projectContainer {
+        .imgContainer {
+            display: none; 
+        }
+    }
     .projectCard {
         flex-direction: column-reverse;
         align-items: center;
@@ -102,16 +107,34 @@
     header {
         background-position: center;
         background-size: cover;
+        .wrapper {
+            .textContainer {
+                h1 {
+                    font-size: 1.2rem; 
+                }
+                h3 {
+                    font-size: 1.2rem; 
+                }
+            }
+            
+        }
+        .chevronContainer {
+            right: 40%; 
+        }
     }
     //About Section 
     .aboutFlexContainer {
+        .aboutTextContainer {
+            margin-left: 0px; 
+        }
         .aboutImgContainer {
-            width: 100%;
+            display: none; 
         }
     }
 
     //Toolkit Section
     .iconContainer {
+        justify-content: center;
         .iconItemContainer {
             width: calc(33% - 50px);
         }

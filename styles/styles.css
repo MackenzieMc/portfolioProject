@@ -483,6 +483,8 @@ canvas {
 .aboutFlexContainer .aboutTextContainer {
   width: calc(70% - 40px);
   margin-left: 40px;
+  word-spacing: 2px;
+  line-height: 30px;
 }
 
 .toolkit {
@@ -825,6 +827,10 @@ footer .wrapper a:focus {
     width: calc(20% - 20px);
   }
 
+  .projectContainer .imgContainer {
+    display: none;
+  }
+
   .projectCard {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -885,11 +891,28 @@ footer .wrapper a:focus {
     background-position: center;
     background-size: cover;
   }
-
-  .aboutFlexContainer .aboutImgContainer {
-    width: 100%;
+  header .wrapper .textContainer h1 {
+    font-size: 1.2rem;
+  }
+  header .wrapper .textContainer h3 {
+    font-size: 1.2rem;
+  }
+  header .chevronContainer {
+    right: 40%;
   }
 
+  .aboutFlexContainer .aboutTextContainer {
+    margin-left: 0px;
+  }
+  .aboutFlexContainer .aboutImgContainer {
+    display: none;
+  }
+
+  .iconContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .iconContainer .iconItemContainer {
     width: calc(33% - 50px);
   }
