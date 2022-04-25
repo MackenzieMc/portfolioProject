@@ -14,7 +14,7 @@
     <header>
         <div id="particles-js">
             <nav>
-                <ul class="navContainer">
+                <ul class="navContainer" data-aos='fade-down' data-aos-delay='1000' data-aos-duration='1500'>
                     <li><a href="#about" class="navItems">About</a></li>
                     <li><a href="#toolkit" class="navItems">Toolkit</a></li>
                     <li><a href="#projects" class="navItems">Projects</a></li>
@@ -23,15 +23,16 @@
                 </ul>
             </nav>
             <div class="wrapper">
+                <hr class="divider">
                 <div class="textContainer">
-                    <h3>Hello! I'm</h3>
-                    <h1>Mackenzie McClemont</h1>
+                    <h1 data-aos='fade-up' data-aos-delay='1000' data-aos-duration='1500'>Mackenzie McClemont</h1>
+                    <h3 data-aos='fade-up' data-aos-delay='1000' data-aos-duration='1500'>Front-End Developer</h3>
                 </div>
+                <a class="chevronContainer" href="#about" data-aos='fade-up' data-aos-delay='1000' data-aos-duration='1500'>
+                    <i class="fa-solid fa-chevron-down chevron bounce"></i>
+                    <p>Scroll Down</p>
+                </a>
             </div>
-            <a class="chevronContainer" href="#about">
-                <i class="fa-solid fa-chevron-down chevron bounce"></i>
-                <p>Scroll Down</p>
-            </a>
         </div>
     </header>
     <main>
@@ -42,9 +43,9 @@
                         <img src="./assets/myAvatar.png" alt="a picture of me as an avatar :)">
                     </div>
                     <div class="aboutTextContainer">
-                        <h2>Who am I?</h2>
-                        <p>I am a front end developer from Toronto, Ontario! As a developer with experience working in cross functional roles I bring a wealth of experience in team based colloboration. I am passionate about championing diversity and inclusion which allows me to think about all users when building and desigining modern, accessible, and responsive applications.</p>
-                        <p>When im not coding you can catch me trail running, watching a basketball game, or attempting to learn the piano.</p>
+                        <h2 data-aos='fade-up'>Who am I?</h2>
+                        <p data-aos='fade-up'> I am a front end developer from Toronto, Ontario! As a developer with experience working in cross functional roles I bring a wealth of experience in team based colloboration. I am passionate about championing diversity and inclusion which allows me to think about all users when building and desigining modern, accessible, and responsive applications.</p>
+                        <p data-aos='fade-up'>When im not coding you can catch me trail running, watching a basketball game, or attempting to learn the piano.</p>
                     </div>
                 </div>
 
@@ -98,55 +99,75 @@
             <h2>My Projects</h2>
             <div class="projectContainer">
                 <div class="projects">
-                    <div class="projectCard">
+                    <div class="projectCard" data-aos="fade-up">
+                        <div class="imgContainer">
+                            <img src="./assets/PodcastPrioritizer.png" alt="display of the app Podcast Prioritize">
+                        </div>
                         <div class="projectInfo" >
                             <h3 class="titleText">Podcast Prioritizer</h3>
-                            <ul>
-                                <li><i class="fa-brands fa-html5"></i></li>
-                                <li><i class="fa-brands fa-css3"></i></li>
-                                <li><i class="fa-brands fa-sass"></i></li>
-                                <li><i class="fa-brands fa-js"></i></li>
-                                <li><i class="fa-brands fa-react"></i></li>
-                                <li><i class="devicon-firebase-plain"></i></li>
-                                <li><i class="fa-solid fa-users"></i></li>
-                            </ul>
-                            <a href="https://github.com/PodcastPrioritizerProject/podcastPrioritizer">GitHub</a>
-                            <a href="https://www.mackenziecodes.ca/project-four">Live Site</a>
+                            <p>A React web app which suggests podcasts to users based on their commute type, mode of transporation, and selected genre! Using React Router we were able to give each podcast its own page, more information about each podcast can be seen by simply clicking on their container!  With firebase implementation users can store podcasts within a community favourites pop out.</p>
+                            <div class="skillsAndLinks">
+                                <ul>
+                                    <li><i class="fa-brands fa-html5"></i><p>HTML5</p></li>
+                                    <li><i class="fa-brands fa-css3"></i><p>CSS3</p></li>
+                                    <li><i class="fa-brands fa-sass"></i><p>SASS</p></li>
+                                    <li><i class="fa-brands fa-js"></i><p>JavaScript</p></li>
+                                    <li><i class="fa-brands fa-react"></i><p>React</p></li>
+                                    <li><i class="devicon-firebase-plain"></i><p>Firebase</p></li>
+                                    <li><i class="fa-solid fa-users"></i><p>Group Programming</p></li>
+                                </ul>
+                                <div class="links">
+                                    <a href="https://github.com/PodcastPrioritizerProject/podcastPrioritizer">GitHub</a>
+                                    <a href="https://www.mackenziecodes.ca/project-four">Live Site</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="projectCard">
+                    <div class="projectCard" data-aos="fade-up">
+                        <div class="imgContainer">
+                            <img src="./assets/Jeopardy.png" alt="display of the app Jeopardy">
+                        </div>
                         <div class="projectInfo">
                             <h3 class="titleText">Jeopardy</h3>
-                            <ul>
-                                <li><i class="fa-brands fa-html5"></i></li>
-                                <li><i class="fa-brands fa-css3"></i></li>
-                                <li><i class="fa-brands fa-sass"></i></li>
-                                <li><i class="fa-brands fa-js"></i></li>
-                                <li><i class="fa-brands fa-react"></i></li>
-                            </ul>
-                            <a href="https://github.com/MackenzieMc/jeopardy">GitHub</a>
-                            <a href="https://phenomenal-boba-585c26.netlify.app/">Live Site</a>
+                            <p>A Jeopardy-like quiz game made in React! This app takes Jeopardy questions from the jService.io API and displays a selection of 5 different questions. The user has one guess to answer the question before moving on to the next. The score is tallied at the end of the quiz and displayed to the user. </p>
+                            <div class="skillsAndLinks">
+                                <ul>
+                                    <li><i class="fa-brands fa-html5"></i><p>HTML5</p></li>
+                                    <li><i class="fa-brands fa-css3"></i><p>CSS3</p></li>
+                                    <li><i class="fa-brands fa-sass"></i><p>SASS</p></li>
+                                    <li><i class="fa-brands fa-js"></i><p>JavaScript</p></li>
+                                    <li><i class="fa-brands fa-react"></i><p>React</p></li>
+                                </ul>
+                                <div class="links">
+                                    <a href="https://github.com/MackenzieMc/jeopardy">GitHub</a>
+                                    <a href="https://jeopardylite.netlify.app/">Live Site</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="projectCard">
+                    <div class="projectCard" data-aos="fade-up">
+                        <div class="imgContainer">
+                            <img src="./assets/Flix.png" alt="display of the app Flix">
+                        </div>
                         <div class="projectInfo">
                             <h3 class="titleText">Flix</h3>
-                            <ul>
-                                <li><i class="fa-brands fa-html5"></i></li>
-                                <li><i class="fa-brands fa-css3"></i></li>
-                                <li><i class="fa-brands fa-sass"></i></li>
-                                <li><i class="fa-brands fa-js"></i></li>
-                                <li><i class="fa-solid fa-user-group"></i></li>
-                            </ul>
-                            <a href="https://github.com/flixProject2/flix">GitHub</a>
-                            <a href="https://condescending-wescoff-31bda7.netlify.app/">Live Site</a>
+                            <p>A Netflix lite movie display app which takes in movies from the MovieDB API using a variety of endpoints and displays them! Users can search for movies or choose from the variety of categories available such as Popular, Top Rated, or Genre!</p>
+                            <div class="skillsAndLinks">
+                                <ul>
+                                    <li><i class="fa-brands fa-html5"></i><p>HTML5</p></li>
+                                    <li><i class="fa-brands fa-css3"></i><p>CSS3</p></li>
+                                    <li><i class="fa-brands fa-sass"></i><p>SASS</p></li>
+                                    <li><i class="fa-brands fa-js"></i><p>JavaScript</p></li>
+                                    <li><i class="fa-solid fa-user-group"></i><p>Pair Programming</p></li>
+                                </ul>
+                                <div class="links">
+                                    <a href="https://github.com/flixProject2/flix">GitHub</a>
+                                    <a href="https://condescending-wescoff-31bda7.netlify.app/">Live Site</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="imgContainer">
-                    <img class="selectedImage" src="./assets/Podcast Prioritizer.png" alt="Multiple viewpoints for the app PodCast Prioritizer">
-                </div>
-
             </div>
             <!-- End of wrapper -->
         </section>
@@ -154,9 +175,9 @@
         <section id="contact" class="contact">
             <div class="circleContact"></div>
             <div class="contactContainer wrapper">
-                <div class="contactInfo">
+                <div class="contactInfo" data-aos="fade-up">
                     <h2>Let's Connect!</h2>
-                    <p>If you ever want to grab a coffee or just want a quick chat - you can find me on social media or you can send me a message here!</p>
+                    <p>Thanks for checking out my portfolio! If you ever want to grab a coffee or just want a quick chat - you can find me on social media or you can send me a message here!</p>
                     <ul class="iconContainer">
                         <li>
                             <a href="https://www.linkedin.com/in/mackenziemcclemont/"><i class="fa-brands fa-linkedin"></i></a>
@@ -174,7 +195,7 @@
                 </div>
                 <div class="contactForm">
                     <form action="https://formspree.io/f/mvolrlpy"
-                        method="POST">
+                        method="POST" data-aos='fade-up'>
                         <label for="name" class="sr-only"></label>
                         <input type="text" name="name" id="name" placeholder="Name">
 

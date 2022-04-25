@@ -9,32 +9,16 @@ particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
 app.scrollAction = () => {
     window.onscroll = () => {
         let navBar = document.querySelector('.navContainer') 
-        console.log(navBar);
-        console.log(document.scrollingElement.scrollTop)
-        if(document.scrollingElement.scrollTop > 200) {
-            navBar.style.backgroundColor = '#051622'
-        } else if (document.scrollingElement.scrollTop == 0) {
-            navBar.style.backgroundColor = 'transparent'
-        }
-    
+        if(document.scrollingElement.scrollTop > 50) {
+            navBar.classList.add('fixedBar')
+        } else if (document.scrollingElement.scrollTop < 50) {
+            navBar.classList.remove('fixedBar')
+        }   
     }
     
 }
 
-app.projectImages = () => {
-    let imgElement = document.querySelector('.selectedImage')
-    let projectTitle = document.querySelectorAll('.titleText')
-
-    projectTitle.forEach( (project) => {
-        project.addEventListener('click', () => {
-            imgElement.src = `./assets/${project.textContent}.png`
-        })
-    })
-
-}
-
 app.init = () => {
-    app.projectImages();
     app.scrollAction();
 }
 

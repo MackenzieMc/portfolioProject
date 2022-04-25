@@ -7,6 +7,7 @@ header {
         flex-direction: column;
         height: 90vh;
         justify-content: center;
+        text-align: center;
         h3 {
             font-size: 2rem;
             margin-bottom: 0; 
@@ -31,16 +32,15 @@ header {
     .chevronContainer {
                 display: flex; 
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
                 position: absolute;
                 bottom: 20px; 
-                right: 50%;
+                left: 45%;
                 color: white; 
                 text-decoration: none;
                 z-index: 25;
-                opacity: 0.5;
                 transition: 0.3s ease-in;
+                margin: auto; 
 
                 &:hover,
                 &:focus {
@@ -50,9 +50,12 @@ header {
                 .chevron {
                     color: white; 
                     font-size: 1.4rem; 
+                    opacity: 0.5;
                 }
                 p {
                     color: white;
+                    opacity: 0.5; 
+                    font-size: 0.8rem; 
                 }
     }
     .bounce {
@@ -76,4 +79,25 @@ canvas {
     height: 100%;
     top: 0;
     z-index: 20;
+}
+
+.divider {
+    width: 100%;
+    border-top: 0.5px solid $secondary;
+    position: absolute;
+    z-index: 29;
+    left: 0; 
+    right: 0; 
+    margin: 0 auto; 
+    top: 20%;
+    animation: full-width 2.5s forwards; 
+}
+
+@keyframes full-width {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%; 
+    }
 }
