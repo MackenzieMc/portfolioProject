@@ -99,28 +99,28 @@
     }
 
     //Nav Bar
-    nav {
-        .mobileNav {
-            display: flex;
-            position: absolute;
-            color: $tertiary; 
-            top: 100px; 
-            right: 50px;
-            background-color: transparent;
-            border: none; 
-            z-index: 30;
-        }
-        .navContainer {
-            display: flex;
-            justify-content: flex-end;
-            padding-bottom: 10px;
-            li {
-                .navItems, .resume {
-                    display: none; 
-                }
-            }
-        }
-    }
+    // nav {
+    //     .mobileNav {
+    //         display: flex;
+    //         position: absolute;
+    //         color: $tertiary; 
+    //         top: 100px; 
+    //         right: 50px;
+    //         background-color: transparent;
+    //         border: none; 
+    //         z-index: 30;
+    //     }
+    //     .navContainer {
+    //         display: flex;
+    //         justify-content: flex-end;
+    //         padding-bottom: 10px;
+    //         li {
+    //             .navItems, .resume {
+    //                 display: none; 
+    //             }
+    //         }
+    //     }
+    // }
 
     //About Section
     .aboutFlexContainer {

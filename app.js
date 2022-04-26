@@ -6,7 +6,8 @@ particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
 });
 
 
-app.scrollAction = () => { 
+app.scrollAction = () => {
+    
     window.onscroll = () => {
         let navBar = document.querySelector('.navContainer') 
         if(document.scrollingElement.scrollTop > 50) {
@@ -18,9 +19,6 @@ app.scrollAction = () => {
     
 }
 
-a.handleMobileNav = () => {
-
-}
 
 app.init = () => {
     app.scrollAction();
