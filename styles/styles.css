@@ -326,6 +326,12 @@ section {
   width: 100%;
 }
 
+.mobileNav {
+  display: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
 .fixedBar {
   position: fixed;
   background-color: #051622;
@@ -865,7 +871,7 @@ footer .wrapper a:focus {
     text-align: center;
   }
 
-  .navContainer li a {
+  .navContainer .navItems a {
     font-size: 0.8rem;
   }
 
@@ -946,6 +952,31 @@ footer .wrapper a:focus {
 @media (max-width: 768px) {
   p {
     font-size: 0.8rem;
+  }
+
+  nav .mobileNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    color: #1ba098;
+    top: 100px;
+    right: 50px;
+    background-color: transparent;
+    border: none;
+    z-index: 30;
+  }
+  nav .navContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-bottom: 10px;
+  }
+  nav .navContainer li .navItems, nav .navContainer li .resume {
+    display: none;
   }
 
   .aboutFlexContainer {

@@ -47,6 +47,11 @@
     }
 }
 
+.mobileNav {
+    display: none; 
+    color: #fff; 
+    font-size: 1.5rem; 
+}
 .fixedBar {
     position: fixed;
     background-color: $primary;
