@@ -663,6 +663,10 @@ section h2 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.projectCard .imgContainer .salaryBandsImg {
+  -o-object-position: left;
+     object-position: left;
+}
 .projectCard .projectInfo {
   width: 60%;
   padding: 30px;
@@ -865,15 +869,12 @@ footer .wrapper a:focus {
   header .textContainer h1 {
     font-size: 2rem;
   }
-
   section h2 {
     text-align: center;
   }
-
   .navContainer .navItems a {
     font-size: 0.8rem;
   }
-
   .aboutFlexContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -894,11 +895,9 @@ footer .wrapper a:focus {
   .aboutFlexContainer .aboutTextContainer h2 {
     text-align: left;
   }
-
   .iconContainer .iconItemContainer {
     width: calc(20% - 20px);
   }
-
   .projectCard {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -915,7 +914,6 @@ footer .wrapper a:focus {
     width: 60%;
     margin-top: 30px;
   }
-
   .contactContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -952,7 +950,6 @@ footer .wrapper a:focus {
   p {
     font-size: 0.8rem;
   }
-
   .aboutFlexContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -972,7 +969,6 @@ footer .wrapper a:focus {
   .aboutFlexContainer .aboutTextContainer h2 {
     text-align: center;
   }
-
   .projectCard {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -995,7 +991,6 @@ footer .wrapper a:focus {
   .navContainer li a {
     font-size: 0.6rem;
   }
-
   header {
     background-position: center;
     background-size: cover;
@@ -1009,7 +1004,6 @@ footer .wrapper a:focus {
   header .chevronContainer {
     right: 40%;
   }
-
   .aboutFlexContainer .aboutTextContainer {
     margin-left: 0px;
     font-size: 0.8rem;
@@ -1017,7 +1011,6 @@ footer .wrapper a:focus {
   .aboutFlexContainer .aboutImgContainer {
     display: none;
   }
-
   .iconContainer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1030,7 +1023,6 @@ footer .wrapper a:focus {
   .iconContainer .iconItemContainer .hoverText {
     font-size: 0.8rem;
   }
-
   .contactContainer .contactInfo {
     font-size: 0.8rem;
   }
@@ -1040,7 +1032,6 @@ footer .wrapper a:focus {
   .contactContainer .contactInfo .iconContainer li:nth-child(4) {
     margin-right: 0px;
   }
-
   footer p {
     font-size: 0.8rem;
   }
@@ -1055,7 +1046,6 @@ footer .wrapper a:focus {
   header .textContainer p {
     font-size: 1rem;
   }
-
   .projectCard .projectInfo a {
     width: 50%;
   }
